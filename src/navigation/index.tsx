@@ -1,19 +1,20 @@
 import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { HomeScreen } from '../screens'
 
-const MainStack = createStackNavigator()
+const BottomMenuStack = createNativeStackNavigator()
 
 export const AppNavigation = () => {
   return (
-    <MainStack.Navigator>
-      <MainStack.Screen
-        name="BottomTabs"
-        component={BottomTabs}
+    <BottomMenuStack.Navigator>
+      <BottomMenuStack.Screen
+        name="Home"
+        component={HomeScreen}
         options={{
           headerShown: false,
           gestureEnabled: false
         }}
       />
-    </MainStack.Navigator>
+    </BottomMenuStack.Navigator>
   )
 }
